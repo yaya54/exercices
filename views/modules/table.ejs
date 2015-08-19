@@ -1,0 +1,153 @@
+<% include ../topbar.ejs %>
+
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tables</a></li>
+                    <li class="active">Basic</li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                
+                <!-- PAGE TITLE -->
+                <div class="page-title">                    
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Employee settings </h2>
+                </div>
+                <!-- END PAGE TITLE -->                
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                
+                    
+                    <!-- START RESPONSIVE TABLES -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Employee list</h3>
+                                								<div class="btn-group pull-right">
+                                        <button class="btn btn-success" ><i class="fa fa-plus-square"></i> Ajouter employee </button>
+                                </div>
+                                </div>
+
+                                <div class="panel-body panel-body-table">
+
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-actions">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50">Id</th>
+                                                    <th width="50">Username</th>
+                                                    <th width="100">Nom</th>
+                                                    <th width="100">Prenom</th>
+                                                    <th width="100">Status</th>
+                                                    <th width="100">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                                            
+                                                <tr id="trow_1">
+                                                    <td class="text-center">1</td>
+                                                    <td><strong>John Doe</strong></td>
+                                                    <td><span class="label label-success">New</span></td>
+                                                    <td>$430.20</td>
+                                                    <td>24/09/2014</td>
+                                                    <td>
+                                                        <button class="btn btn-default btn-rounded btn-sm"><span class="fa fa-pencil"></span></button>
+                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_1');"><span class="fa fa-times"></span></button>
+                                                    </td>
+                                                </tr>
+                                                <tr id="trow_2">
+                                                    <td class="text-center">2</td>
+                                                    <td><strong>Dmitry Ivaniuk</strong></td>
+                                                    <td><span class="label label-warning">Pending</span></td>
+                                                    <td>$1,351.00</td>
+                                                    <td>23/09/2014</td>
+                                                    <td>
+                                                        <button class="btn btn-default btn-rounded btn-sm"><span class="fa fa-pencil"></span></button>
+                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_2');"><span class="fa fa-times"></span></button>
+                                                    </td>
+                                                </tr>
+                                                <tr id="trow_3">
+                                                    <td class="text-center">3</td>
+                                                    <td><strong>Nadia Ali</strong></td>
+                                                    <td><span class="label label-info">In Queue</span></td>
+                                                    <td>$2,621.00</td>
+                                                    <td>22/09/2014</td>
+                                                    <td>
+                                                        <button class="btn btn-default btn-rounded btn-sm"><span class="fa fa-pencil"></span></button>
+                                                        <button class="btn btn-danger btn-rounded btn-sm" onClick="delete_row('trow_3');"><span class="fa fa-times"></span></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>                                
+
+                                </div>
+                            </div>                                                
+
+                        </div>
+                    </div>
+                    <!-- END RESPONSIVE TABLES -->
+                    
+                <!-- END PAGE CONTENT WRAPPER -->                                    
+                </div>         
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->    
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-remove-row">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-times"></span> Remove <strong>Data</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to remove this row?</p>                    
+                        <p>Press Yes if you sure.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <button class="btn btn-success btn-lg mb-control-yes">Yes</button>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->        
+        
+        <!-- MESSAGE BOX-->
+
+        <% include ../logout.ejs %>
+
+        <!-- END MESSAGE BOX-->
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                      
+
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+        
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/demo_tables.js"></script>     
+        <!-- END THIS PAGE PLUGINS-->  
+        
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="js/settings.js"></script>
+        
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script>        
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->                 
+    </body>
+</html>
